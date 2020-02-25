@@ -3,13 +3,13 @@ beforeEach(() => {
 cy.visit('https://stgapplicant.vetty.co/login') 
 }) 
 it('Login with Valid Email Id and Invalid Password', function(){ 
-cy.get('#email').type('raqalyc@getnada.com') 
+cy.get('#email').type('jypyw@getnada.com') 
 cy.get('#ssn').type(12345678).should('have.value', 123456) //wrong password 
 cy.get('.form-control').click() 
 cy.wait(10000) 
 })    
 it('Login with Valid Email Id and Password, fill the details and redirected to VP', function(){ 
-cy.get('#email').type('raqalyc@getnada.com') 
+cy.get('#email').type('jypyw@getnada.com') 
 cy.get('#ssn').type('123456') 
 cy.get('.form-control').click() 
 cy.wait(10000) 
@@ -55,7 +55,7 @@ cy.get('.btnBottomNevigation > .btnDefault').click()
 }) 
 it('Login but do not fill complete details and not able to redirect to VP', function(){ 
 cy.wait(5000) 
-cy.get('#email').type('pejyr@getnada.com') 
+cy.get('#email').type('lepofiz@getnada.com') 
 cy.get('#ssn').type('123456') 
 cy.get('.form-control').click() 
 cy.wait(10000) 
